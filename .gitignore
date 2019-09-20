@@ -1,4 +1,4 @@
 db*
-butler/settings.py
+.idea/
 *__pycache__
 migrations/
