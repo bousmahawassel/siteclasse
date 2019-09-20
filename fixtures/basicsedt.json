@@ -5,7 +5,12 @@
 		"fields": {
 			"day": 1,
 			"hour":8,
-			"week":0
+			"week":0,
+			"subject":"",
+			"room":"",
+			"teacher":"",
+			"option":"",
+			"ph_prof":""
 		}
 	},
 	{
@@ -18,7 +23,8 @@
 			"subject": "CAM",
 			"room": "B404",
 			"teacher":"Mme Mazurek",
-			"option": "CAM"
+			"option": "CAM",
+			"ph_prof": ""
 		}
 	},
 	{
@@ -30,7 +36,9 @@
 			"week":0,
 			"subject":"maths",
 			"room":"B404",
-			"teacher":"Mme Carementrant"
+			"teacher":"Mme Carementrant",
+			"option":"",
+			"ph_prof":""
 		}
 	},
 	{
@@ -42,7 +50,9 @@
 			"week":0,
 			"subject":"fr",
 			"room":"B404",
-			"teacher":"Mme Fohanno"
+			"teacher":"Mme Fohanno",
+			"option":"",
+			"ph_prof":""
 		}
 	},
 	{
@@ -55,6 +65,8 @@
 			"subject":"HG",
 			"room":"B404",
 			"teacher":"Mme Wormser",
+			"option":"",
+			"ph_prof":""
 		}
 	},
 	{
@@ -64,7 +76,11 @@
 			"day":1,
 			"hour":12,
 			"week":0,
-			"subject":"dej"
+			"subject":"dej",
+			"room":"",
+			"teacher":"",
+			"option":"",
+			"ph_prof":""
 		}
 	},
 	{
@@ -76,7 +92,9 @@
 			"week":0,
 			"subject":"LVA",
 			"room":"B404",
-			"teacher":"Mme Mazurek"
+			"teacher":"Mme Mazurek",
+			"option":"",
+			"ph_prof":""
 		}
 	},
 	{
@@ -88,7 +106,9 @@
 			"week":0,
 			"subject":"maths",
 			"room":"B404",
-			"teacher":"Mme Carementrant"
+			"teacher":"Mme Carementrant",
+			"option":"",
+			"ph_prof":""
 		}
 	},
 	{
@@ -100,7 +120,9 @@
 			"week":0,
 			"subject":"fr",
 			"room": "B404",
-			"teacher":"Mme Fohanno"
+			"teacher":"Mme Fohanno",
+			"option":"",
+			"ph_prof":""
 		}
 	},
 	{
@@ -109,12 +131,12 @@
 		"fields":{
 			"day":1,
 			"hour":16,
-			"duration":2,
 			"week":0,
 			"subject":"NSI",
 			"room":"B400",
 			"teacher":"Mr Sediri",
-			"option":"NSI"
+			"option":"NSI",
+			"ph_prof":""
 		}
 	},
 	{
@@ -123,10 +145,7 @@
 		"fields":{
 			"day":1,
 			"hour":16,
-			"duration":2,
 			"week":0,
 			"subject":"SVT",
 			"room":"B404",
-			"teacher":"Mme Petris-Dubus",
-			"option":"SVT"
 ]
