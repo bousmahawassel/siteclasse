@@ -5,12 +5,7 @@
 		"fields": {
 			"day": 1,
 			"hour":8,
-			"week":0,
-			"subject":"",
-			"room":"",
-			"teacher":"",
-			"option":"",
-			"ph_prof":""
+			"week":0
 		}
 	},
 	{
@@ -22,9 +17,7 @@
 			"week": 0,
 			"subject": "CAM",
 			"room": "B404",
-			"teacher":"Mme Mazurek",
-			"option": "CAM",
-			"ph_prof": ""
+			"teacher":"Mme Mazurek"
 		}
 	},
 	{
@@ -36,9 +29,7 @@
 			"week":0,
 			"subject":"maths",
 			"room":"B404",
-			"teacher":"Mme Carementrant",
-			"option":"",
-			"ph_prof":""
+			"teacher":"Mme Carementrant"
 		}
 	},
 	{
@@ -50,9 +41,7 @@
 			"week":0,
 			"subject":"fr",
 			"room":"B404",
-			"teacher":"Mme Fohanno",
-			"option":"",
-			"ph_prof":""
+			"teacher":"Mme Fohanno"
 		}
 	},
 	{
@@ -64,9 +53,7 @@
 			"week":0,
 			"subject":"HG",
 			"room":"B404",
-			"teacher":"Mme Wormser",
-			"option":"",
-			"ph_prof":""
+			"teacher":"Mme Wormser"
 		}
 	},
 	{
@@ -76,11 +63,7 @@
 			"day":1,
 			"hour":12,
 			"week":0,
-			"subject":"dej",
-			"room":"",
-			"teacher":"",
-			"option":"",
-			"ph_prof":""
+			"subject":"dej"
 		}
 	},
 	{
@@ -92,9 +75,7 @@
 			"week":0,
 			"subject":"LVA",
 			"room":"B404",
-			"teacher":"Mme Mazurek",
-			"option":"",
-			"ph_prof":""
+			"teacher":"Mme Mazurek"
 		}
 	},
 	{
@@ -106,9 +87,7 @@
 			"week":0,
 			"subject":"maths",
 			"room":"B404",
-			"teacher":"Mme Carementrant",
-			"option":"",
-			"ph_prof":""
+			"teacher":"Mme Carementrant"
 		}
 	},
 	{
@@ -120,9 +99,7 @@
 			"week":0,
 			"subject":"fr",
 			"room": "B404",
-			"teacher":"Mme Fohanno",
-			"option":"",
-			"ph_prof":""
+			"teacher":"Mme Fohanno"
 		}
 	},
 	{
@@ -132,20 +109,327 @@
 			"day":1,
 			"hour":16,
 			"week":0,
+			"duration":2,
 			"subject":"NSI",
 			"room":"B400",
-			"teacher":"Mr Sediri",
-			"option":"NSI",
-			"ph_prof":""
+			"teacher":"Mr Sediri"
 		}
 	},
 	{
 		"model":"infos.Hour",
-		"pk":"11",
+		"pk":11,
 		"fields":{
 			"day":1,
 			"hour":16,
 			"week":0,
+			"duration":2,
 			"subject":"SVT",
 			"room":"B404",
+			"teacher":"Mme Petris-Dubus"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":12,
+		"fields":{
+			"day":2,
+			"hour":8,
+			"week":0
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":13,
+		"fields":{
+			"day":2,
+			"hour":9,
+			"week":0,
+			"subject":"ES",
+			"room":"B403",
+			"teacher":"Mme Petris-Dubus"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":14,
+		"fields":{
+			"day":2,
+			"hour":10,
+			"week":0,
+			"subject":"PH-CH",
+			"room":"B404",
+			"teacher":"Mme Ben Belkacem"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":15,
+		"fields":{
+			"day":2,
+			"hour":10,
+			"week":0,
+			"subject":"PH-CH",
+			"room":"B03",
+			"teacher":"Mr Bernaud"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":16,
+		"fields":{
+			"day":2,
+			"hour":11,
+			":week":0,
+			"duration":2,
+			"subject":"Latin",
+			"room":"B403",
+			"teacher":"Mme Lalau"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":17,
+		"fields":{
+			"day":2,
+			"hour":11,
+			"week":0,
+			"duration":3,
+			"subject":"dej"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":18,
+		"fields":{
+			"day":2,
+			"hour":11,
+			"week":0,
+			"duration":2,
+			"subject":"dej"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":19,
+		"fields":{
+			"day":2,
+			"hour":11,
+			"week":0
+		}
+	},
+	{
+		"model":":infos.Hour",
+		"pk":20,
+		"fields":{
+			"day":2,
+			"hour":12,
+			"week":0,
+			"subject":"Italien",
+			"room":"B400",
+			"teacher":"Mme Arnaud"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":21,
+		"fields":{
+			"day":2,
+			"hour":13,
+			"week":0,
+			"subject":"dej"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":22,
+		"fields":{
+			"day":2,
+			"hour":13,
+			"week":0,
+			"subject":"maths",
+			"room":"B404",
+			"teacher":"Mme Carementrant"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":23,
+		"fields":{
+			"day":2,
+			"hour":14,
+			"week":0,
+			"subject":"maths",
+			"room":"B404",
+			"teacher":"Mme Carementrant"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":24,
+		"fields":{
+			"day":2,
+			"hour":14,
+			"week":0
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":25,
+		"fields":{
+			"day":2,
+			"hour":15,
+			"week":0,
+			"subject":"NSI",
+			"room":"B404",
+			"teacher":"Mr Sediri"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":26,
+		"fields":{
+			"day":2,
+			"hour":15,
+			"week":0
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":27,
+		"fields":{
+			"day":2,
+			"hour":16,
+			"duration":2,
+			"week":0,
+			"subject":"Italien",
+			"room":"B101",
+			"teacher":"Mme Arnaud"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":28,
+		"fields":{
+			"day":2,
+			"hour":16,
+			"duration":2,
+			"week":0,
+			"subject":"LVBChi",
+			"room":"B102",
+			"teacher":"Mme Hui"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":29,
+		"fields":{
+			"day":2,
+			"hour":16,
+			"duration":2,
+			"week":0,
+			"subject":"Arts",
+			"room":"C405",
+			"teacher":"Mme Bertaud du Chazaud"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":30,
+		"fields":{
+			"day":2,
+			"hour":16,
+			"duration":2,
+			"week":0,
+			"subject":"Musique",
+			"room":"C203",
+			"teacher":"Mr Lahoreau"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":31,
+		"fields":{
+			"day":3,
+			"hour":8,
+			"duration":2,
+			"week":0,
+			"subject":"EPS"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":32,
+		"fields":{
+			"day":3,
+			"hour":10,
+			"week":0,
+			"subject":"NSI",
+			"room":"B400",
+			"teacher":"Mr Sediri"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":33,
+		"fields":{
+			"day":3,
+			"hour":10,
+			"week":0
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":34,
+		"fields":{
+			"day":3,
+			"hour":11,
+			"week":0,
+			"subject":"fr",
+			"room":"B404",
+			"teacher":"Mme Fohanno"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":35,
+		"fields":{
+			"day":3,
+			"hour":12,
+			"week":0,
+			"subject":"NSI",
+			"room":"C205",
+			"teacher":"Mr Sediri"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":36,
+		"fields":{
+			"day":3,
+			"hour":12,
+			"duration":2,
+			"week":0,
+			"subject":"dej"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":37,
+		"fields":{
+			"day":3,
+			"hour":13,
+			"week":0,
+			"subject":"dej"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":38,
+		"fields":{
+			"day":3,
+			"hour":14,
+			"duration":4,
+			"subject":"DST"
+		}
+	}
 ]

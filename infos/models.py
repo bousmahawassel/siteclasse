@@ -50,7 +50,7 @@ class Hour(models.Model):
 		("LVA", "anglais"),
 		("LVBEsp", "Espagnol"),
 		("LVBAll", "Allemand"),
-		("LVBIta", "Italien LVB"),
+		("Italien", "Italien"),
 		("LVBChi", "Chinois"),
 		("ES", "Enseignement Scientifique"),
 		("HG", "Histoire-Géo"),
@@ -60,39 +60,14 @@ class Hour(models.Model):
 		("NSI", "NSI"),
 		("SVT", "SVT"),
 		("Latin", "Latin"),
-		("LVCIta", "Italien LVC"),
 		("Arts", "Arts Plastiques"),
 		("CAM", "Cambridge"),
 		("Musique", "Musique"),
 		("dej", "déjeuner"),
+		("DST", "DST"),
 	], max_length=10, blank=True, default="")
 	room = models.CharField(max_length=5,blank = True, default="")
 	teacher = models.TextField(blank=True, default="")
-	option = models.TextField(blank=True, choices=[
-	("LVBEsp", "LVB Espagnol"),
-	("LVBAll", "LVB Allemand"),
-	("LVBIta", "LVB Italien"),
-	("LVBChi", "LVB Chinois"),
-	("SVT", "SVT"),
-	("NSI", "NSI"),
-	("LVCIta", "LVC Italien"),
-	("Latin", "Latin"),
-	("Arts", "Arts Plastiques"),
-	("CAM", "Cambridge"),
-	("Musique", "Musique"),
-	], default="")
-	group = models.IntegerField(choices=[
-	(1, "groupe 1"),
-	(2, "groupe 2"),
-	], null=True)
-	ph_prof = models.CharField(choices=[
-	("Bernaud", "Bernaud"),
-	("Ben Belkacem", "Ben Belkacem"),
-	], max_length=15, blank=True, default="")
-	ph_group = models.IntegerField(choices=[
-	(1, "Groupe 1 Ben Belkacem"),
-	(2, "Groupe 2 Ben Belkacem"),
-	], blank=True, null=True)
 
 class Timetable(models.Model):
 	LVB = models.CharField(choices=[
@@ -127,6 +102,10 @@ class Timetable(models.Model):
 	ph_group = models.IntegerField(choices=[
 	(1, "Groupe 1 Ben Belkacem"),
 	(2, "Groupe 2 Ben Belkacem"),
+	], blank=True, null=True)
+	nsi_group = models.IntegerField(choices=[
+	(1, "Groupe 1 NSI"),
+	(2, "Groupe 2 NSI"),
 	], blank=True, null=True)
 	
 #class TimetableManager(models.Manager):
