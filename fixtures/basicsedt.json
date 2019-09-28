@@ -560,5 +560,181 @@
 			"room":"B400",
 			"teacher":"Mme Ben Belkacem"
 		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":54,
+		"fields":{
+			"day":5,
+			"hour":8
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":55,
+		"fields":{
+			"day":5,
+			"hour":8,
+			"subject":"LVBEsp",
+			"room":"B400",
+			"teacher":"Mme Rodriguez Abal"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":56,
+		"fields":{
+			"day":5,
+			"hour":8,
+			"subject":"LVBAll",
+			"room":"C202",
+			"teacher":"Mme Muller-Trufaut"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":57,
+		"fields":{
+			"day":5,
+			"hour":9,
+			"subject":"HG",
+			"room":"B404",
+			"teacher":"Mme Wormser"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":58,
+		"fields":{
+			"day":5,
+			"hour":10,
+			"subject":"maths",
+			"room":"B404",
+			"teacher":"Mme Carementrant"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":59,
+		"fields":{
+			"day":5,
+			"hour":11,
+			"week":1,
+			"subject":"LVA",
+			"room":"B404",
+			"teacher":"Mme Mazurek"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":60,
+		"fields":{
+			"day":5,
+			"hour":11,
+			"week":2,
+			"subject":"HG",
+			"room":"B404",
+			"teacher":"Mme Wormser"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":61,
+		"fields":{
+			"day":5,
+			"hour":12,
+			"week":1,
+			"subject":"ES",
+			"room":"B404",
+			"teacher":"Mme Petris-Dubus"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":62,
+		"fields":{
+			"day":5,
+			"hour":12,
+			"week":2,
+			"subject":"VDC",
+			"room":"B404",
+			"teacher":"Mme Petris-Dubus"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":63,
+		"fields":{
+			"day":5,
+			"hour":13,
+			"duration":2,
+			"subject":"dej"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":64,
+		"fields":{
+			"day":5,
+			"hour":13,
+			"subject":"dej"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":65,
+		"fields":{
+			"day":5,
+			"hour":14,
+			"subject":"LVBEsp",
+			"room":"B301",
+			"teacher":"Mme Rodriguez Abal"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":66,
+		"fields":{
+			"day":5,
+			"hour":14,
+			"subject":"LVBAll",
+			"room":"B302",
+			"teacher":"Mme Muller-Trufaut"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":67,
+		"fields":{
+			"day":5,
+			"hour":15,
+			"week":1,
+			"subject":"HG",
+			"room":"B300",
+			"teacher":"Mme Wormser"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":68,
+		"fields":{
+			"day":5,
+			"hour":15,
+			"week":2,
+			"subject":"ES",
+			"room":"B300",
+			"teacher":"Mme Petris-Dubus"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":69,
+		"fields":{
+			"day":5,
+			"hour":16,
+			"subject":"SVT",
+			"room":"B304",
+			"teacher":"Mme Petris-Dubus"
+		}
 	}
 ]

@@ -66,6 +66,7 @@ class Hour(models.Model):
 		("Musique", "Musique"),
 		("dej", "déjeuner"),
 		("DST", "DST"),
+		("VDC", "Vie de classe")
 	], max_length=10, blank=True, default="")
 	room = models.CharField(max_length=5,blank = True, default="")
 	teacher = models.TextField(blank=True, default="")
