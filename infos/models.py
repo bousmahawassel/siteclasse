@@ -26,11 +26,12 @@ class Hour(models.Model):
 		(4, "JEUDI"),
 		(5, "VENDREDI"),
 	])
-	hour = models.IntegerField(choices=[
+	hour = models.FloatField(choices=[
 		(8, "8h10"),
 		(9, "9h05"),
 		(10, "10h20"),
 		(11, "11h15"),
+		(11.5, "11h45"),
 		(12, "12h10"),
 		(13, "13h05"),
 		(14, "14h00"),
@@ -39,11 +40,11 @@ class Hour(models.Model):
 		(17, "17h00"),
 	])
 	duration = models.IntegerField(default=1)
-	week = models.IntegerField(choices=[
+	week = models.FloatField(choices=[
 		(1, 1),
 		(2, 2),
 		(0, "Toutes les semaines"),
-	])
+	], default=0)
 	subject = models.CharField(choices=[
 		("maths", "maths"),
 		("fr", "français"),

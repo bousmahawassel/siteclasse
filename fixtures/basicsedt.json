@@ -4,8 +4,7 @@
 		"pk": 1,
 		"fields": {
 			"day": 1,
-			"hour":8,
-			"week":0
+			"hour":8
 		}
 	},
 	{
@@ -14,7 +13,6 @@
 		"fields": {
 			"day": 1,
 			"hour": 8,
-			"week": 0,
 			"subject": "CAM",
 			"room": "B404",
 			"teacher":"Mme Mazurek"
@@ -26,7 +24,6 @@
 		"fields": {
 			"day":1,
 			"hour":9,
-			"week":0,
 			"subject":"maths",
 			"room":"B404",
 			"teacher":"Mme Carementrant"
@@ -38,7 +35,6 @@
 		"fields": {
 			"day":1,
 			"hour":10,
-			"week":0,
 			"subject":"fr",
 			"room":"B404",
 			"teacher":"Mme Fohanno"
@@ -50,7 +46,6 @@
 		"fields": {
 			"day":1,
 			"hour":11,
-			"week":0,
 			"subject":"HG",
 			"room":"B404",
 			"teacher":"Mme Wormser"
@@ -62,7 +57,6 @@
 		"fields": {
 			"day":1,
 			"hour":12,
-			"week":0,
 			"subject":"dej"
 		}
 	},
@@ -72,7 +66,6 @@
 		"fields": {
 			"day":1,
 			"hour":13,
-			"week":0,
 			"subject":"LVA",
 			"room":"B404",
 			"teacher":"Mme Mazurek"
@@ -84,7 +77,6 @@
 		"fields":{
 			"day":1,
 			"hour":14,
-			"week":0,
 			"subject":"maths",
 			"room":"B404",
 			"teacher":"Mme Carementrant"
@@ -96,7 +88,6 @@
 		"fields":{
 			"day":1,
 			"hour":15,
-			"week":0,
 			"subject":"fr",
 			"room": "B404",
 			"teacher":"Mme Fohanno"
@@ -108,7 +99,6 @@
 		"fields":{
 			"day":1,
 			"hour":16,
-			"week":0,
 			"duration":2,
 			"subject":"NSI",
 			"room":"B400",
@@ -121,7 +111,6 @@
 		"fields":{
 			"day":1,
 			"hour":16,
-			"week":0,
 			"duration":2,
 			"subject":"SVT",
 			"room":"B404",
@@ -133,8 +122,7 @@
 		"pk":12,
 		"fields":{
 			"day":2,
-			"hour":8,
-			"week":0
+			"hour":8
 		}
 	},
 	{
@@ -143,7 +131,6 @@
 		"fields":{
 			"day":2,
 			"hour":9,
-			"week":0,
 			"subject":"ES",
 			"room":"B403",
 			"teacher":"Mme Petris-Dubus"
@@ -155,7 +142,6 @@
 		"fields":{
 			"day":2,
 			"hour":10,
-			"week":0,
 			"subject":"PH-CH",
 			"room":"B404",
 			"teacher":"Mme Ben Belkacem"
@@ -167,7 +153,6 @@
 		"fields":{
 			"day":2,
 			"hour":10,
-			"week":0,
 			"subject":"PH-CH",
 			"room":"B03",
 			"teacher":"Mr Bernaud"
@@ -179,7 +164,7 @@
 		"fields":{
 			"day":2,
 			"hour":11,
-			":week":0,
+			"week":0,
 			"duration":2,
 			"subject":"Latin",
 			"room":"B403",
@@ -192,7 +177,6 @@
 		"fields":{
 			"day":2,
 			"hour":11,
-			"week":0,
 			"duration":3,
 			"subject":"dej"
 		}
@@ -203,7 +187,6 @@
 		"fields":{
 			"day":2,
 			"hour":11,
-			"week":0,
 			"duration":2,
 			"subject":"dej"
 		}
@@ -213,8 +196,7 @@
 		"pk":19,
 		"fields":{
 			"day":2,
-			"hour":11,
-			"week":0
+			"hour":11
 		}
 	},
 	{
@@ -223,7 +205,6 @@
 		"fields":{
 			"day":2,
 			"hour":12,
-			"week":0,
 			"subject":"Italien",
 			"room":"B400",
 			"teacher":"Mme Arnaud"
@@ -235,7 +216,6 @@
 		"fields":{
 			"day":2,
 			"hour":13,
-			"week":0,
 			"subject":"dej"
 		}
 	},
@@ -245,7 +225,6 @@
 		"fields":{
 			"day":2,
 			"hour":13,
-			"week":0,
 			"subject":"maths",
 			"room":"B404",
 			"teacher":"Mme Carementrant"
@@ -256,8 +235,7 @@
 		"pk":23,
 		"fields":{
 			"day":2,
-			"hour":14,
-			"week":0,
+			"hour":14,,
 			"subject":"maths",
 			"room":"B404",
 			"teacher":"Mme Carementrant"
@@ -268,8 +246,7 @@
 		"pk":24,
 		"fields":{
 			"day":2,
-			"hour":14,
-			"week":0
+			"hour":14
 		}
 	},
 	{
@@ -277,8 +254,7 @@
 		"pk":25,
 		"fields":{
 			"day":2,
-			"hour":15,
-			"week":0,
+			"hour":15,,
 			"subject":"NSI",
 			"room":"B404",
 			"teacher":"Mr Sediri"
@@ -289,8 +265,7 @@
 		"pk":26,
 		"fields":{
 			"day":2,
-			"hour":15,
-			"week":0
+			"hour":15
 		}
 	},
 	{
@@ -299,8 +274,7 @@
 		"fields":{
 			"day":2,
 			"hour":16,
-			"duration":2,
-			"week":0,
+			"duration":2,,
 			"subject":"Italien",
 			"room":"B101",
 			"teacher":"Mme Arnaud"
@@ -312,8 +286,7 @@
 		"fields":{
 			"day":2,
 			"hour":16,
-			"duration":2,
-			"week":0,
+			"duration":2,,
 			"subject":"LVBChi",
 			"room":"B102",
 			"teacher":"Mme Hui"
@@ -325,8 +298,7 @@
 		"fields":{
 			"day":2,
 			"hour":16,
-			"duration":2,
-			"week":0,
+			"duration":2,,
 			"subject":"Arts",
 			"room":"C405",
 			"teacher":"Mme Bertaud du Chazaud"
@@ -338,8 +310,7 @@
 		"fields":{
 			"day":2,
 			"hour":16,
-			"duration":2,
-			"week":0,
+			"duration":2,,
 			"subject":"Musique",
 			"room":"C203",
 			"teacher":"Mr Lahoreau"
@@ -352,7 +323,6 @@
 			"day":3,
 			"hour":8,
 			"duration":2,
-			"week":0,
 			"subject":"EPS"
 		}
 	},
@@ -362,7 +332,6 @@
 		"fields":{
 			"day":3,
 			"hour":10,
-			"week":0,
 			"subject":"NSI",
 			"room":"B400",
 			"teacher":"Mr Sediri"
@@ -373,8 +342,7 @@
 		"pk":33,
 		"fields":{
 			"day":3,
-			"hour":10,
-			"week":0
+			"hour":10
 		}
 	},
 	{
@@ -383,7 +351,6 @@
 		"fields":{
 			"day":3,
 			"hour":11,
-			"week":0,
 			"subject":"fr",
 			"room":"B404",
 			"teacher":"Mme Fohanno"
@@ -395,7 +362,6 @@
 		"fields":{
 			"day":3,
 			"hour":12,
-			"week":0,
 			"subject":"NSI",
 			"room":"C205",
 			"teacher":"Mr Sediri"
@@ -407,8 +373,7 @@
 		"fields":{
 			"day":3,
 			"hour":12,
-			"duration":2,
-			"week":0,
+			"duration":2,,
 			"subject":"dej"
 		}
 	},
@@ -418,7 +383,6 @@
 		"fields":{
 			"day":3,
 			"hour":13,
-			"week":0,
 			"subject":"dej"
 		}
 	},
@@ -429,7 +393,172 @@
 			"day":3,
 			"hour":14,
 			"duration":4,
+			"week":1,
 			"subject":"DST"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":39,
+		"fields":{
+			"day":4,
+			"hour":8,
+			"duration":2,,
+			"subject":"fr",
+			"room":"B404",
+			"teacher":"Mme Fohanno"
+		}
+	},
+	{
+                "model":"infos.Hour",                             "pk":40, 
+                "fields":{
+                        "day":4,
+                        "hour":10,
+                        "duration":1.5,
+                        "subject":"PH-CH",
+                        "room":"Labos",
+                        "teacher":"Mr Bernaud"
+                }
+	},
+	{
+                "model":"infos.Hour",                             "pk":41,
+                "fields":{
+                        "day":4,
+                        "hour":10,
+                        "duration":1.5,
+                        "week":0,
+                        "subject":"PH-CH",
+                        "room":"Labos",
+                        "teacher":"Mme Ben Belkacem"
+		}
+	},
+	{
+                "model":"infos.Hour",                             "pk":42,                                          "fields":{
+			"day":4,
+			"hour":10,
+			"duration":1.5,,
+                        "subject":"SVT",
+			"room":"Labos",
+			"teacher":"Mme Petris-Dubus"
+		}                                         },
+	{
+		"model":"infos.Hour",
+		"pk":43,
+		"fields":{
+			"day":4,
+			"hour":10,
+			"duration":1.5
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":44,
+		"fields":{
+			"day":4,
+			"hour":11.5,
+			"subject":"PH-CH",
+			"room":"Labos",
+			"teacher":"Mme Ben Belkacem"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":45,
+		"fields":{
+			"day":4,
+			"hour":11.5,
+			"duration":2.5,
+			"subject":"dej"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":46,
+		"fields":{
+			"day":4,
+			"hour":13,
+			"subject":"dej"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":47,
+		"fields":{
+			"day":4,
+			"hour":14,
+			"subject":"PH-CH",
+			"room":"C103",
+			"teacher":"Mr Bernaud"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":48,
+		"fields":{
+			"day":4,
+			"hour":14,
+			"subject":"PH-CH",
+			"room":"B404",
+			"teacher":"Mme Ben Belkacem"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":49,
+		"fields":{
+			"day":4,
+			"hour":15,
+			"subject":"LVA",
+			"room":"B404",
+			"teacher":"Mme Mazurek"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":50,
+		"fields":{
+			"day":4,
+			"hour":16,
+			"week":1,
+			"subject":"EMC",
+			"room":"B04",
+			"teacher":"Mme Wormser"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":51,
+		"fields":{
+			"day":4,
+			"hour":16,
+			"week":2,
+			"subject":"EMC",
+			"room":"B04",
+			"teacher":"Mme Wormser"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":52,
+		"fields":{
+			"day":4,
+			"hour":17,
+			"week":1,
+			"subject":"PH-CH",
+			"room":"B404",
+			"teacher":"Mr Bernaud"
+		}
+	},
+	{
+		"model":"infos.Hour",
+		"pk":53,
+		"fields":{
+			"day":4,
+			"hour":17,
+			"week":1,
+			"subject":"PH-CH",
+			"room":"B400",
+			"teacher":"Mme Ben Belkacem"
 		}
 	}
 ]
