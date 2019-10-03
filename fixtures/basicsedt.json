@@ -164,7 +164,6 @@
 		"fields":{
 			"day":2,
 			"hour":11,
-			"week":0,
 			"duration":2,
 			"subject":"Latin",
 			"room":"B403",
@@ -235,7 +234,7 @@
 		"pk":23,
 		"fields":{
 			"day":2,
-			"hour":14,,
+			"hour":14,
 			"subject":"maths",
 			"room":"B404",
 			"teacher":"Mme Carementrant"
@@ -254,7 +253,7 @@
 		"pk":25,
 		"fields":{
 			"day":2,
-			"hour":15,,
+			"hour":15,
 			"subject":"NSI",
 			"room":"B404",
 			"teacher":"Mr Sediri"
@@ -274,7 +273,7 @@
 		"fields":{
 			"day":2,
 			"hour":16,
-			"duration":2,,
+			"duration":2,
 			"subject":"Italien",
 			"room":"B101",
 			"teacher":"Mme Arnaud"
@@ -286,7 +285,7 @@
 		"fields":{
 			"day":2,
 			"hour":16,
-			"duration":2,,
+			"duration":2,
 			"subject":"LVBChi",
 			"room":"B102",
 			"teacher":"Mme Hui"
@@ -310,7 +309,7 @@
 		"fields":{
 			"day":2,
 			"hour":16,
-			"duration":2,,
+			"duration":2,
 			"subject":"Musique",
 			"room":"C203",
 			"teacher":"Mr Lahoreau"
@@ -373,7 +372,7 @@
 		"fields":{
 			"day":3,
 			"hour":12,
-			"duration":2,,
+			"duration":2,
 			"subject":"dej"
 		}
 	},
@@ -403,7 +402,7 @@
 		"fields":{
 			"day":4,
 			"hour":8,
-			"duration":2,,
+			"duration":2,
 			"subject":"fr",
 			"room":"B404",
 			"teacher":"Mme Fohanno"
@@ -436,7 +435,7 @@
                 "model":"infos.Hour",                             "pk":42,                                          "fields":{
 			"day":4,
 			"hour":10,
-			"duration":1.5,,
+			"duration":1.5,
                         "subject":"SVT",
 			"room":"Labos",
 			"teacher":"Mme Petris-Dubus"
@@ -736,5 +735,19 @@
 			"room":"B304",
 			"teacher":"Mme Petris-Dubus"
 		}
-	}
+	},
+	{
+		"model":"infos.DefaultHours",
+		"pk":1,
+		"fields":{
+			"hours":[3,4,5,6,7,8,9,12,
+13,31,34,38,39,49,57,58,59,60,61,62,67,68]
+		}
+	},
+	{
+		"model":"infos.Timetable",
+		"pk":1,
+		"fields":{
+			"LVB":"LVBEsp",
+			"hours":[10,14,15,17,23,25,32,]
 ]

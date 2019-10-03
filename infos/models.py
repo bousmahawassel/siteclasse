@@ -70,7 +70,10 @@ class Hour(models.Model):
 	], max_length=10, blank=True, default="")
 	room = models.CharField(max_length=5,blank = True, default="")
 	teacher = models.TextField(blank=True, default="")
-
+	
+class DefaultHours(SingletonModel):
+    hours = models.ManyToManyField('Hour')
+	
 class Timetable(models.Model):
 	LVB = models.CharField(choices=[
 	("LVBEsp", "LVB Espagnol"),
@@ -81,18 +84,18 @@ class Timetable(models.Model):
 	SP3 = models.CharField(choices=[
 	("ISN", "ISN"),
 	("SVT", "SVT"),
-	], max_length=3)
+	], max_length=3, default="ISN")
 	option = models.TextField(choices=[
 	("Latin", "Latin"),
 	("LVCIta", "Italien LVC"),
 	("Arts", "Arts Plastiques"),
 	("Musique", "Musique"),
-	], blank=True)
+	], blank=True, default="")
 	cam = models.BooleanField(choices=[
 	(True, "Cambridge"),
 	(False, "Pas cambridge"),
-	])
-	hours = models.ManyToManyField(Hour)
+	], default=False)
+	hours = models.ManyToManyField('Hour')
 	group = models.IntegerField(choices=[
 	(1, "groupe 1"),
 	(2, "groupe 2"),
