@@ -1,16 +1,22 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import TimeTable from './Component/TimeTable/TimeTable'
+import TimeTable from './Component/TimeTable/TimeTable';
+import Auth from './Component/Auth/Auth';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
       <Router>
           <Switch>
-            <Route component={TimeTable} path={"/edt"}/>
-            <Route render={function render() {return (<p>Error</p>)}} path="*"/>
+              {/*<Route component={Auth} path="/" exact/>*/}
+              <Route path="/" exact>
+                  <Redirect to="/edt/"/>
+              </Route>
+              <Route component={TimeTable} path={"/edt/"} exact/>
+              <Route render={function render() {return (<p>Error</p>)}} path="*"/>
           </Switch>
       </Router>
     </div>
