@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import axios from "axios";
-import Table from "react-bootstrap/Table"
 import Row from "./TimeTableRow"
 
 class TimeTable extends Component {
@@ -22,17 +21,17 @@ class TimeTable extends Component {
     render() {
         let edt = this.state.edt;
         edt.sort((a, b) => {
-            if (a.hour === b.hour) {
+            if (a.day === b.day) {
                 if (a.day === b.day) {
                     return a.week - b.week
                 }
                 return a.day - b.day
             }
-            return a.hour - b.hour
+            return a.day - b.day
         });
-        let hour;
+        let day;
         return (
-            <Table striped bordered hover>
+            <div>
                 <thead>
                     <tr>
                         <th>Lundi</th>
@@ -43,29 +42,17 @@ class TimeTable extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    <Row edt={edt} hour={8}/>
+                    <Row edt={edt} day={1}/>
                     <br/>
-                    <Row edt={edt} hour={9}/>
+                    <Row edt={edt} day={2}/>
                     <br/>
-                    <Row edt={edt} hour={10}/>
+                    <Row edt={edt} day={3}/>
                     <br/>
-                    <Row edt={edt} hour={11}/>
+                    <Row edt={edt} day={4}/>
                     <br/>
-                    <Row edt={edt} hour={11.5}/>
-                    <br/>
-                    <Row edt={edt} hour={12}/>
-                    <br/>
-                    <Row edt={edt} hour={13}/>
-                    <br/>
-                    <Row edt={edt} hour={14}/>
-                    <br/>
-                    <Row edt={edt} hour={15}/>
-                    <br/>
-                    <Row edt={edt} hour={16}/>
-                    <br/>
-                    <Row edt={edt} hour={17}/>
+                    <Row edt={edt} day={5}/>
                 </tbody>
-            </Table>
+            </e>
         )
     }
 }
