@@ -22,13 +22,13 @@ class TimeTable extends Component {
     render() {
         let edt = this.state.edt;
         edt.sort((a, b) => {
-            if (a.hour === b.hour) {
-                if (a.day === b.day) {
+            if (a.day === b.day) {
+                if (a.hour === b.hour) {
                     return a.week - b.week
                 }
-                return a.day - b.day
+                return a.hour - b.hour
             }
-            return a.hour - b.hour
+            return a.day - b.day
         });
         return (
             <div className="table">
