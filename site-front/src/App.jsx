@@ -1,10 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import TimeTable from './Component/TimeTable/TimeTable';
 import Auth from './Component/Auth/Auth';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

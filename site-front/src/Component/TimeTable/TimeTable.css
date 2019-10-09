@@ -1,0 +1,15 @@
+.row{
+    background-color:red;
+    /*height: 50px*/;
+    border: 1px black solid;
+}
+.column{
+    width: 100px;
+    /*height: 100px;*/
+    text-align:left;
+    float:left;
+}
+.table{
+    /*height: 200px;*/
+    float:left;
+}

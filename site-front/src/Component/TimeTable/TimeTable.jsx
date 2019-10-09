@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from "axios";
-import Row from "./TimeTableRow"
+import Row from "./TimeTableRow";
+import './TimeTable.css'
 
 class TimeTable extends Component {
     constructor(props) {
@@ -21,38 +22,22 @@ class TimeTable extends Component {
     render() {
         let edt = this.state.edt;
         edt.sort((a, b) => {
-            if (a.day === b.day) {
+            if (a.hour === b.hour) {
                 if (a.day === b.day) {
                     return a.week - b.week
                 }
                 return a.day - b.day
             }
-            return a.day - b.day
+            return a.hour - b.hour
         });
-        let day;
         return (
-            <div>
-                <thead>
-                    <tr>
-                        <th>Lundi</th>
-                        <th>Mardi</th>
-                        <th>Mercredi</th>
-                        <th>Jeudi</th>
-                        <th>Vendredi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <Row edt={edt} day={1}/>
-                    <br/>
-                    <Row edt={edt} day={2}/>
-                    <br/>
-                    <Row edt={edt} day={3}/>
-                    <br/>
-                    <Row edt={edt} day={4}/>
-                    <br/>
-                    <Row edt={edt} day={5}/>
-                </tbody>
-            </e>
+            <div className="table">
+                <Row edt={edt.filter(hour => hour.day === 1)} day={1}/>
+                <Row edt={edt.filter(hour => hour.day === 2)} day={2}/>
+                <Row edt={edt.filter(hour => hour.day === 3)} day={3}/>
+                <Row edt={edt.filter(hour => hour.day === 4)} day={4}/>
+                <Row edt={edt.filter(hour => hour.day === 5)} day={5}/>
+            </div>
         )
     }
 }
