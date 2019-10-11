@@ -79,14 +79,7 @@ class Option(models.Model):
     hours = models.ManyToManyField('Hour')
 	
 class Timetable(models.Model):
-	LVB = models.ManyToManyField('Option')
-	SP3 = models.ManyToManyField('Option')
-	option = models.ManyToManyField('Option', null=True, blank=True)
-	cam =models.ManyToManyField('Option', null=True, blank=True)
-	group = models.ManyToManyField('Option')
-	ph_prof = models.ManyToManyField('Option')
-	ph_group = models.ManyToManyField('Option', null=True)
-	nsi_group = models.ManyToManyField('Option', null=True)
+	hours = models.ManyToManyField('Option')
 	
 #class TimetableManager(models.Manager):
 #    def get_by_natural_key(self, LVB, SP3, option, cam):
