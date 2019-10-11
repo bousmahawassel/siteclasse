@@ -79,43 +79,14 @@ class Option(models.Model):
     hours = models.ManyToManyField('Hour')
 	
 class Timetable(models.Model):
-	LVB = models.CharField(choices=[
-	("LVBEsp", "LVB Espagnol"),
-	("LVBAll", "LVB Allemand"),
-	("LVBChi", "LVB Chinois"),
-	("LVBIta", "LVB Italien"),
-	], max_length=6)
-	SP3 = models.CharField(choices=[
-	("ISN", "ISN"),
-	("SVT", "SVT"),
-	], max_length=3, default="ISN")
-	option = models.TextField(choices=[
-	("Latin", "Latin"),
-	("LVCIta", "Italien LVC"),
-	("Arts", "Arts Plastiques"),
-	("Musique", "Musique"),
-	], blank=True, default="")
-	cam = models.BooleanField(choices=[
-	(True, "Cambridge"),
-	(False, "Pas cambridge"),
-	], default=False)
-	hours = models.ManyToManyField('Hour')
-	group = models.IntegerField(choices=[
-	(1, "groupe 1"),
-	(2, "groupe 2"),
-	], default=1)
-	ph_prof = models.CharField(choices=[
-	("Bernaud", "Bernaud"),
-	("Ben Belkacem", "Ben Belkacem"),
-	], max_length=15, default="Ben Belkacem")
-	ph_group = models.IntegerField(choices=[
-	(1, "Groupe 1 Ben Belkacem"),
-	(2, "Groupe 2 Ben Belkacem"),
-	], blank=True, null=True)
-	nsi_group = models.IntegerField(choices=[
-	(1, "Groupe 1 NSI"),
-	(2, "Groupe 2 NSI"),
-	], blank=True, null=True)
+	LVB = models.ManyToManyField('Option')
+	SP3 = models.ManyToManyField('Option')
+	option = models.ManyToManyField('Option', null=True, blank=True)
+	cam =models.ManyToManyField('Option', null=True, blank=True)
+	group = models.ManyToManyField('Option')
+	ph_prof = models.ManyToManyField('Option')
+	ph_group = models.ManyToManyField('Option', null=True)
+	nsi_group = models.ManyToManyField('Option', null=True)
 	
 #class TimetableManager(models.Manager):
 #    def get_by_natural_key(self, LVB, SP3, option, cam):
