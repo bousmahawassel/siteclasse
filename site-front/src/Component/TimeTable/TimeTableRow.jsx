@@ -4,10 +4,18 @@ import PropTypes from 'prop-types';
 export default function Row(props) {
     //let hour;
     let edt = props.edt;
+    let day = props.day;
     return (
         <div className="column">
+            <div className="hrow"><p>{["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"][day]}</p></div>
             {edt.map((hour) => (
-                <div key={hour.id} className="row" style={{height: `${hour.duration * 150}px`}}>
+                <div key={hour.id} className="row" style={
+                    {
+                        height: `${hour.duration * 125}px`,
+                        width: hour.week ? "148px" : "299px",
+                        fontSize: hour.week ? "7px" : "14px"
+                    }
+                }>
                     {
                         (
                             hour.subject &&

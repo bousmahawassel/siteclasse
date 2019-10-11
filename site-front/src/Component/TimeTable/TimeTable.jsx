@@ -32,11 +32,11 @@ class TimeTable extends Component {
         });
         return (
             <div className="table">
-                <Row edt={edt.filter(hour => hour.day === 1)} day={1}/>
-                <Row edt={edt.filter(hour => hour.day === 2)} day={2}/>
-                <Row edt={edt.filter(hour => hour.day === 3)} day={3}/>
-                <Row edt={edt.filter(hour => hour.day === 4)} day={4}/>
-                <Row edt={edt.filter(hour => hour.day === 5)} day={5}/>
+                <Row edt={edt.filter(hour => hour.day === 1)} day={0}/>
+                <Row edt={edt.filter(hour => hour.day === 2)} day={1}/>
+                <Row edt={edt.filter(hour => hour.day === 3)} day={2}/>
+                <Row edt={edt.filter(hour => hour.day === 4)} day={3}/>
+                <Row edt={edt.filter(hour => hour.day === 5)} day={4}/>
             </div>
         )
     }
