@@ -22,21 +22,21 @@ class TimeTable extends Component {
     render() {
         let edt = this.state.edt;
         edt.sort((a, b) => {
-            if (a.hour === b.hour) {
-                if (a.day === b.day) {
+            if (a.day === b.day) {
+                if (a.hour === b.hour) {
                     return a.week - b.week
                 }
-                return a.day - b.day
+                return a.hour - b.hour
             }
-            return a.hour - b.hour
+            return a.day - b.day
         });
         return (
             <div className="table">
-                <Row edt={edt.filter(hour => hour.day === 1)} day={1}/>
-                <Row edt={edt.filter(hour => hour.day === 2)} day={2}/>
-                <Row edt={edt.filter(hour => hour.day === 3)} day={3}/>
-                <Row edt={edt.filter(hour => hour.day === 4)} day={4}/>
-                <Row edt={edt.filter(hour => hour.day === 5)} day={5}/>
+                <Row edt={edt.filter(hour => hour.day === 1)} day={0}/>
+                <Row edt={edt.filter(hour => hour.day === 2)} day={1}/>
+                <Row edt={edt.filter(hour => hour.day === 3)} day={2}/>
+                <Row edt={edt.filter(hour => hour.day === 4)} day={3}/>
+                <Row edt={edt.filter(hour => hour.day === 5)} day={4}/>
             </div>
         )
     }
