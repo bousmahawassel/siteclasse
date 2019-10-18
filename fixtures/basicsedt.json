@@ -771,5 +771,157 @@
       "hours": [1, 12, 15, 17, 22, 24, 34, 37, 43, 45, 47, 49, 51, 54, 56, 65, 66, 70],
       "ph_group": 1
     }
+  },
+  {
+	  "model": "infos.Option",
+	  "pk": 1,
+	  "fields": {
+		"name_opt":"NSI groupe 1",
+		"hours": [10, 26, 33]
+	}
+  },
+  {
+	  "model":"infos.Option",
+	  "pk":2,
+	  "fields": {
+		"name_opt":"NSI groupe 2",
+		"hours": [11, 26, 33, 36]
+	}
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 3,
+	  "fields": {
+		  "name_opt":"SVT",
+		  "hours": [12, 43, 70]
+	}
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 4,
+	  "fields": 
+		  "name_opt":"Chinois",
+		  "hours": [29, 55, 64]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 5,
+	  "fields": {
+		  "name_opt": "Italien",
+		  "hours": [20, 21, 22, 28, 55, 64]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 6,
+	  "fields": {
+		  "name_opt":"Espagnol",
+		  "hours": [56, 65, 66]
+	  }
+  },
+  {
+	  "model": "infos.Option",
+	  "pk": 7,
+	  "fields": {
+		  "name_opt": "Allemand",
+		  "hours": [57, 65, 67]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 8,
+	  "fields": {
+		  "name_opt": "Latin",
+		  "hours": [17, 22]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 9,
+	  "fields": {
+		  "name_opt": "Musique",
+		  "hours":[31]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 10,
+	  "fields": {
+		  "name_opt": "CAM",
+		  "hours":[2]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 11,
+	  "fields": {
+		  "name_opt": "not-CAM",
+		  "hours": [1]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 12,
+	  "fields": {
+		  "name_opt":"PH Bernaud",
+		  "hours": [17, 41, 46, 48, 53]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 13,
+	  "fields": {
+		  "name_opt": "PH Ben Belkacem groupe 1",
+		  "hours": [18, 42, 46, 49, 54]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 14,
+	  "fields": {
+		  "name_opt": "PH Ben Belkacem groupe 2",
+		  "hours": [18, 45, 47, 49, 54]
+	  }
+  },
+  {
+	  "model": "infos.Option",
+	  "pk": 15,
+	  "fields": {
+		  "name_opt": "groupe 1",
+		  "hours": [24, 51]
+	  }
+  },
+  {
+	  "model": "infos.Option",
+	  "pk": 16,
+	  "fields": {
+		  "name_opt": "groupe 2",
+		  "hours": [23, 52]
+	  }
+  },
+  {
+	  "model": "infos.Option",
+	  "pk": 16,
+	  "fields": {
+		  "name_opt": "groupe 1 pas latin ou italien",
+		  "hours": [18]
+	  }
+  },
+  {
+	  "model":"infos.Option",
+	  "pk": 17,
+	  "fields": {
+		  "name_opt": "svt et chinois ou ita ou mus",
+		  "hours": [27]
+	  }
+  },
+  {
+	  "model": "infos.Option",
+	  "pk": 18,
+	  "fields": {
+		  "name_opt": "groupe 2 et NSI",
+		  "hours": [25]
+	  }
   }
 ]
