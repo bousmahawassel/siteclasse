@@ -18,7 +18,7 @@ def docs_a_rendre(request):
 @api_view(["GET"])
 def edt(request, id=None, password=None):
     edt = Timetable.objects.all()[0]
-    hours = list(edt.hours.all()) + list(DefaultHours.load().hours.all())
+    hours = [option.hours.all() for option in edt.hours.all()] + list(DefaultHours.load().hours.all())
     data = [HourSerializer(hour).data for hour in hours]
     return Response(data, status.HTTP_200_OK)
 
