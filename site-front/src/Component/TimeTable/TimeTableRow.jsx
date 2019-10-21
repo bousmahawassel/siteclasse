@@ -9,20 +9,17 @@ export default function Row(props) {
         <div className="column">
             <div className="hrow"><p>{["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"][day]}</p></div>
             {edt.map((hour) => (
-                <div key={hour.id} className="row" style={
+                <div key={hour.id} className={"row" + (hour.subject ? "" : " empty")} style={
                     {
-                        height: `${hour.duration * 125}px`,
+                        height: `${hour.duration * 125 + (hour.duration - 1) * 2}px`,
                         width: hour.week ? "148px" : "299px",
-                        fontSize: hour.week ? "7px" : "14px"
+                        fontSize: hour.week ? "7px" : "14px",
                     }
                 }>
                     {
                         (
                             hour.subject &&
                             (<p>{hour.subject}<br/><br/>{hour.teacher}<br/><br/>{hour.room}</p>)
-                        ) ||
-                        (
-                            <p>Étude</p>
                         )
                     }
                 </div>

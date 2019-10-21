@@ -6,6 +6,10 @@
     color: white;
     float: left;
 }
+.empty{
+    background-color: white;
+    float: left;
+}
 .hrow{
     font-weight: bold;
 }
@@ -14,6 +18,9 @@
     width: 300px;
     text-align:center;
     float:left;
+}
+#hour54{
+    border-bottom-width: 0px;
 }
 .table{
     float:left;

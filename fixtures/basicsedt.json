@@ -450,10 +450,7 @@
     "fields":{
       "day":4,
       "hour":10,
-      "duration":1.5,
-      "subject":"SVT",
-      "room":"Labos",
-      "teacher":"Mme Petris-Dubus"
+      "duration":1.5
     }
   },
   {
@@ -462,7 +459,10 @@
     "fields":{
       "day":4,
       "hour":10,
-      "duration":1.5
+      "duration":1.5,
+      "subject":"SVT",
+      "room":"Labos",
+      "teacher":"Mme Petris-Dubus"
     }
   },
   {
@@ -547,6 +547,15 @@
     "fields":{
       "day":4,
       "hour":16,
+      "week":1
+    }
+  },
+  {
+    "model":"infos.Hour",
+    "pk":53,
+    "fields":{
+      "day":4,
+      "hour":16,
       "week":2,
       "subject":"EMC",
       "room":"B04",
@@ -555,7 +564,16 @@
   },
   {
     "model":"infos.Hour",
-    "pk":53,
+    "pk":54,
+    "fields":{
+      "day":4,
+      "hour":16,
+      "week":2
+    }
+  },
+  {
+    "model":"infos.Hour",
+    "pk":55,
     "fields":{
       "day":4,
       "hour":17,
@@ -567,7 +585,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":54,
+    "pk":56,
     "fields":{
       "day":4,
       "hour":17,
@@ -579,7 +597,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":55,
+    "pk":57,
     "fields":{
       "day":5,
       "hour":8
@@ -587,7 +605,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":56,
+    "pk":58,
     "fields":{
       "day":5,
       "hour":8,
@@ -598,7 +616,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":57,
+    "pk":59,
     "fields":{
       "day":5,
       "hour":8,
@@ -609,7 +627,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":58,
+    "pk":60,
     "fields":{
       "day":5,
       "hour":9,
@@ -620,7 +638,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":59,
+    "pk":61,
     "fields":{
       "day":5,
       "hour":10,
@@ -631,7 +649,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":60,
+    "pk":62,
     "fields":{
       "day":5,
       "hour":11,
@@ -643,7 +661,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":61,
+    "pk":63,
     "fields":{
       "day":5,
       "hour":11,
@@ -655,7 +673,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":62,
+    "pk":64,
     "fields":{
       "day":5,
       "hour":12,
@@ -667,7 +685,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":63,
+    "pk":65,
     "fields":{
       "day":5,
       "hour":12,
@@ -679,7 +697,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":64,
+    "pk":66,
     "fields":{
       "day":5,
       "hour":13,
@@ -689,7 +707,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":65,
+    "pk":67,
     "fields":{
       "day":5,
       "hour":13,
@@ -698,7 +716,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":66,
+    "pk":68,
     "fields":{
       "day":5,
       "hour":14,
@@ -709,7 +727,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":67,
+    "pk":69,
     "fields":{
       "day":5,
       "hour":14,
@@ -720,7 +738,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":68,
+    "pk":70,
     "fields":{
       "day":5,
       "hour":15,
@@ -732,7 +750,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":69,
+    "pk":71,
     "fields":{
       "day":5,
       "hour":15,
@@ -744,7 +762,7 @@
   },
   {
     "model":"infos.Hour",
-    "pk":70,
+    "pk":72,
     "fields":{
       "day":5,
       "hour":16,
@@ -772,14 +790,14 @@
         39,
         40,
         50,
-        58,
-        59,
         60,
         61,
         62,
         63,
-        68,
-        69
+        64,
+        65,
+        70,
+        71
       ]
     }
   },
@@ -791,7 +809,8 @@
       "hours":[
         10,
         26,
-        33
+        33,
+        37
       ]
     }
   },
@@ -804,7 +823,8 @@
         11,
         26,
         33,
-        36
+        36,
+        38
       ]
     }
   },
@@ -815,8 +835,8 @@
       "name_opt":"SVT",
       "hours":[
         12,
-        43,
-        70
+        44,
+        72
       ]
     }
   },
@@ -827,8 +847,8 @@
       "name_opt":"Chinois",
       "hours":[
         29,
-        55,
-        64
+        57,
+        66
       ]
     }
   },
@@ -842,8 +862,8 @@
         21,
         22,
         28,
-        55,
-        64
+        57,
+        66
       ]
     }
   },
@@ -853,9 +873,9 @@
     "fields":{
       "name_opt":"Espagnol",
       "hours":[
-        56,
-        65,
-        66
+        58,
+        67,
+        68
       ]
     }
   },
@@ -865,9 +885,9 @@
     "fields":{
       "name_opt":"Allemand",
       "hours":[
-        57,
-        65,
-        67
+        59,
+        67,
+        69
       ]
     }
   },
@@ -908,11 +928,11 @@
     "fields":{
       "name_opt":"PH Bernaud",
       "hours":[
-        17,
+        16,
         41,
         46,
         48,
-        53
+        55
       ]
     }
   },
@@ -924,9 +944,9 @@
       "hours":[
         18,
         42,
-        46,
+        47,
         49,
-        54
+        56
       ]
     }
   },
@@ -936,11 +956,11 @@
     "fields":{
       "name_opt":"PH Ben Belkacem groupe 2",
       "hours":[
-        18,
+        15,
         45,
         47,
         49,
-        54
+        56
       ]
     }
   },
@@ -951,7 +971,8 @@
       "name_opt":"groupe 1",
       "hours":[
         24,
-        51
+        51,
+        54
       ]
     }
   },
@@ -963,7 +984,8 @@
       "hours":[
         19,
         23,
-        52
+        52,
+        53
       ]
     }
   },
@@ -994,6 +1016,16 @@
       "name_opt":"groupe 2 et NSI ou chinois ou italien",
       "hours":[
         25
+      ]
+    }
+  },
+  {
+    "model":"infos.Option",
+    "pk":19,
+    "fields":{
+      "name_opt":"Ben 2 et pas SVT",
+      "hours":[
+        43
       ]
     }
   },
@@ -1203,6 +1235,7 @@
         7,
         10,
         13,
+        15,
         18
       ]
     }
@@ -1212,13 +1245,25 @@
     "pk":16,
     "fields":{
       "hours":[
-        3,
-        5,
-        7,
+        2,
+        4,
         10,
         12,
         15,
-        17,
+        18
+      ]
+    }
+  },
+  {
+    "model":"infos.Timetable",
+    "pk":17,
+    "fields":{
+      "hours":[
+        2,
+        4,
+        10,
+        13,
+        15,
         18
       ]
     }
@@ -1229,7 +1274,8 @@
     "fields":{
       "hours":[
         3,
-        6,
+        4,
+        7,
         10,
         12,
         15,
@@ -1244,7 +1290,7 @@
     "fields":{
       "hours":[
         3,
-        5,
+        6,
         10,
         12,
         15,
@@ -1258,6 +1304,21 @@
     "pk":20,
     "fields":{
       "hours":[
+        3,
+        5,
+        10,
+        12,
+        15,
+        17,
+        18
+      ]
+    }
+  },
+  {
+    "model":"infos.Timetable",
+    "pk":21,
+    "fields":{
+      "hours":[
         2,
         7,
         10,
@@ -1269,7 +1330,7 @@
   },
   {
     "model":"infos.Timetable",
-    "pk":21,
+    "pk":22,
     "fields":{
       "hours":[
         2,
@@ -1284,7 +1345,7 @@
   },
   {
     "model":"infos.Timetable",
-    "pk":22,
+    "pk":23,
     "fields":{
       "hours":[
         2,
