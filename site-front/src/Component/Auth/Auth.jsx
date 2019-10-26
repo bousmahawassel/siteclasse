@@ -34,13 +34,15 @@ class Auth extends Component {
     saveEmail = (event) => {
         this.setState({
             loginInfos: {
-                email: event.target.value
+                email: event.target.value,
+                password:this.state.loginInfos.password
             }
         })
     };
     savePassword = (event) => {
         this.setState({
             loginInfos: {
+                email:this.state.loginInfos.email,
                 password: event.target.value
             }
         })

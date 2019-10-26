@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import logo from './logo_classe.svg'
+import logo from './Logo_classe.png'
 import './App.css';
 import TimeTable from './Component/TimeTable/TimeTable';
 import Auth from './Component/Auth/Auth';
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
           <div className="App-header">
-              <p>Header</p>
+              <img src={logo} alt="logo"/>
           </div>
           <Switch>
               <Route component={Auth} path="/auth" exact/>

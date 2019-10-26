@@ -75,12 +75,13 @@ def reset_password(request, link = None):
 @api_view(["POST"])
 def login(request):
     data = request.data
+    print(data)
     try:
-        user = CustomUser.objects.get(email=data.email)
+        user = CustomUser.objects.get(email=data["email"])
     except:
         return Response({"error": "L'email que tu as fourni est incorrect"}, status.HTTP_401_UNAUTHORIZED)
-    if user.check_password(data.password):
-        return Response({"token": Token.objects.get_or_create(user=user)}, status.HTTP_200_OK)
+    if user.check_password(data["password"]):
+        return Response({"token": Token.objects.get_or_create(user=user)[0].key}, status.HTTP_200_OK)
     else:
         return Response(
             {"error": "Le mot de passe que tu as fourni est incorrect"},

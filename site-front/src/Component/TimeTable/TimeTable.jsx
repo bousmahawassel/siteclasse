@@ -18,7 +18,7 @@ class TimeTable extends Component {
     }
     async loadEdt() {
         try {
-            const promise = await auth_axios.get(constants.BACKEND_SERVER + "/infos/edt");
+            const promise = await auth_axios.get("/infos/edt");
             if (promise === "Not authenticated") {
                 this.setState({notAuthenticated: true})
             } else {

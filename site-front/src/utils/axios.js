@@ -10,7 +10,7 @@ const auth_axios = {
             constants.BACKEND_SERVER + url,
             {
                 headers: {
-                    Authorization:`Token ${localStorage.getItem("token")}`
+                    Authorization: localStorage.getItem("token")
                 }
             }
         )
