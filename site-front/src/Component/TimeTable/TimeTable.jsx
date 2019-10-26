@@ -1,22 +1,37 @@
 import React, {Component} from 'react';
-import axios from "axios";
 import Row from "./TimeTableRow";
+import auth_axios from '../../utils/axios';
 import './TimeTable.css'
+import {Redirect}  from 'react-router-dom'
+import * as constants from '../../utils/constants'
 
 class TimeTable extends Component {
     constructor(props) {
         super(props);
-        this.state = {edt:[]}
+        this.state = {
+            edt:[],
+            notAuthenticated: false
+        }
     }
     componentDidMount() {
         this.loadEdt()
     }
     async loadEdt() {
-        const promise = await axios.get("http://localhost:8000/infos/edt");
-        const status = promise.status;
-        if (status === 200) {
-            let edt = promise.data;
-            this.setState({edt: edt})
+        try {
+            const promise = await auth_axios.get(constants.BACKEND_SERVER + "/infos/edt");
+            if (promise === "Not authenticated") {
+                this.setState({notAuthenticated: true})
+            } else {
+                const status = promise.status;
+                if (status === 200) {
+                    let edt = promise.data;
+                    this.setState({edt: edt})
+                }
+            }
+        } catch(e) {
+            if (e.response.status === 401) {
+                this.setState({notAuthenticated: true})
+            }
         }
     }
     render() {
@@ -30,15 +45,19 @@ class TimeTable extends Component {
             }
             return a.day - b.day
         });
-        return (
-            <div className="table">
-                <Row edt={edt.filter(hour => hour.day === 1)} day={0}/>
-                <Row edt={edt.filter(hour => hour.day === 2)} day={1}/>
-                <Row edt={edt.filter(hour => hour.day === 3)} day={2}/>
-                <Row edt={edt.filter(hour => hour.day === 4)} day={3}/>
-                <Row edt={edt.filter(hour => hour.day === 5)} day={4}/>
-            </div>
-        )
+        if (!this.state.notAuthenticated) {
+            return (
+                <div className="table">
+                    <Row edt={edt.filter(hour => hour.day === 1)} day={0}/>
+                    <Row edt={edt.filter(hour => hour.day === 2)} day={1}/>
+                    <Row edt={edt.filter(hour => hour.day === 3)} day={2}/>
+                    <Row edt={edt.filter(hour => hour.day === 4)} day={3}/>
+                    <Row edt={edt.filter(hour => hour.day === 5)} day={4}/>
+                </div>
+            )
+        } else {
+            return (<Redirect to="/auth/"/>)
+        }
     }
 }
 

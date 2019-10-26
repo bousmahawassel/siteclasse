@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, authentication_classes
+from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
+from rest_framework.authtoken.models import Token
 from .models import *
 from .serializers import *
 
@@ -17,7 +19,14 @@ def docs_a_rendre(request):
 
 @api_view(["GET"])
 def edt(request):
-    edt = Timetable.objects.all()[0]
+    token = request.headers.get("Authorization")
+    if not token:
+        return Response({"error": "Tu n'es pas connecté"}, status.HTTP_401_UNAUTHORIZED)
+    try:
+        user = Token.objects.get(key=token).user
+    except:
+        return Response({"error": "Il y a eu un problème, tu dois te reconnecter"}, status.HTTP_401_UNAUTHORIZED)
+    edt = user.timetable
     hours = list(DefaultHours.load().hours.all())
     for option in edt.hours.all():
         for hour in option.hours.all():
