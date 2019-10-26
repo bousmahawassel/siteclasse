@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import logo from './logo_classe.svg'
 import './App.css';
 import TimeTable from './Component/TimeTable/TimeTable';
 import Auth from './Component/Auth/Auth';
@@ -11,6 +12,9 @@ function App() {
   return (
     <div className="App">
       <Router>
+          <div className="App-header">
+              <p>Header</p>
+          </div>
           <Switch>
               <Route component={Auth} path="/auth" exact/>
               <Route component={TimeTable} path="/edt" exact/>
