@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'custom_auth.CustomUser'
 
-FRONT_END = "http://localhost:3000"
+FRONT_END = "http://1ere5-spf.always-data.net"
 
 
 # Internationalization
