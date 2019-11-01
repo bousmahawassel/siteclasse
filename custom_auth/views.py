@@ -15,11 +15,10 @@ from siteclasse.settings import FRONT_END
 @api_view(["GET", "POST"])
 def reset_password(request, link = None):
     if request.method == "POST":
-        print("reset_password.POST")
         data = request.data
         if not link:
             try:
-                user = CustomUser.objects.get(email=data.email)
+                user = CustomUser.objects.get(email=data["email"])
             except:
                 return Response(
                     {
@@ -28,16 +27,21 @@ def reset_password(request, link = None):
                                  "l'adresse wassel2005@gmail.com en ayant fait une capture d'écran"
                     }, status.HTTP_404_NOT_FOUND
                 )
+            if user.link_is_active:
+                return Response({
+                    "error": "le dernier lien que je t'ai envoyé par mail est déja actif"
+                })
             message = Mail(
                 from_email='Site des 1ère 5 <nepasrepondre@1ere5.fr>',
-                to_emails=data.email,
+                to_emails=data["email"],
                 subject='Changement de mots de passe',
                 html_content=f'<p>Voici le <a href={FRONT_END}/reset_password/{user.link}>lien</a>'
                              f' où tu peux changer de mot de passe')
             sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
             try:
                 sg.send(message)
-            except:
+            except Exception as e:
+                print(dir(e))
                 return Response(
                     {"error": "Suite à une erreur au niveau du serveur, le mail n'a pu être envoyé. "
                               "Réessaye d'ici quelques minutes, et préviens-moi via Whatsapp, par SMS au 07 83 45 19 66"
@@ -48,12 +52,18 @@ def reset_password(request, link = None):
             user.save()
             return Response(None, status.HTTP_200_OK)
         else:
-            user = CustomUser.objects.get(link=link)
+            try:
+                user = CustomUser.objects.get(link=link)
+                assert user.link_is_active
+            except:
+                return Response({"error": "Le lien n'existe pas"})
+            if not user.link_is_active:
+                return Response({"error": "Le mot de passe a déjà été modifié"}, status.HTTP_406_NOT_ACCEPTABLE)
             user.link_is_active = False
-            user.set_password(data.password)
+            user.set_password(data["password"])
             user.save()
             return Response(
-                "Ton mot de passe a bien été changé. Maintenant, tu peux te connecter !",
+                {"success":"Ton mot de passe a bien été changé. Maintenant, tu peux te connecter !"},
                 status.HTTP_202_ACCEPTED
             )
     elif request.method == "GET":
@@ -75,7 +85,6 @@ def reset_password(request, link = None):
 @api_view(["POST"])
 def login(request):
     data = request.data
-    print(data)
     try:
         user = CustomUser.objects.get(email=data["email"])
     except:
