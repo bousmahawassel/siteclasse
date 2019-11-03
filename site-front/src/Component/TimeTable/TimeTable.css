@@ -4,36 +4,25 @@
 .edtrow{
     background-color: green;
     color: white;
-    float: left;
 }
 .empty{
     background-color: white;
-    float: left;
 }
 .hrow{
     font-weight: bold;
 }
 .edtcolumn{
     box-sizing: border-box;
-    width: 300px;
     margin: auto;
     text-align: center;
-    float: left;
 }
-.edttable{
-    width: 1600px !important;
-    overflow: auto;
-    float:left;
-}
+.edttable{}
 .center-big-div{
     margin: 20px auto;
-    width: 500px;
 }
 .center-very-big-div{
     margin: 20px auto;
-    width: 1500px;
 }
 .center-div{
     margin: 20px auto;
-    width: 300px;
 }

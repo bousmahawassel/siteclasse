@@ -3,8 +3,7 @@ import Row from './TimeTableRow'
 import './TimeTable.css'
 import auth_axios from '../../utils/axios'
 import * as moment from 'moment'
-import {ButtonGroup, Button, Alert, Dropdown, DropdownButton} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
+import {Alert} from 'react-bootstrap'
 
 export default class Edt extends Component {
     constructor(props) {
@@ -56,25 +55,16 @@ export default class Edt extends Component {
         });
         return (
             <div className="center-big-div">
-                <ButtonGroup>
-                    <Button onClick={() => {this.props.history.push("/infos/daily_edt")}}>Emploi du temps du jour</Button>
-                    <DropdownButton as={ButtonGroup} title="emploi du temps de la semaine">
-                        <Dropdown.Item as={Link} to="/infos/edt">Emploi du temps général</Dropdown.Item>
-                        <Dropdown.Divider />
-                        <Dropdown.Item as={Link} to="/infos/edt/1">Emploi du temps de semaine 1</Dropdown.Item>
-                        <Dropdown.Item as={Link} to="/infos/edt/2">Emploi du temps de semaine 2</Dropdown.Item>
-                    </DropdownButton>
-                </ButtonGroup>
                 <br/>
                 <br/>
                 <Alert variant="info" className="text-center">
                     Emploi du temps du {
-                        ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"][moment().day()- 1]
+                        ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"][moment().day()]
                     } de semaine {week}
                 </Alert>
                 <br/>
                 <div className="center-div">
-                    <Row edt={edt} day={moment().day() - 1}/>
+                    <Row edt={edt} day={moment().day()}/>
                 </div>
             </div>
         )

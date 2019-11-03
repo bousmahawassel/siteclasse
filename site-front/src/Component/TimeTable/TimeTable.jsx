@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import Row from "./TimeTableRow";
+import Edt from './Edt'
 import auth_axios from '../../utils/axios';
 import './TimeTable.css';
-import {ButtonGroup, Button, DropdownButton, Dropdown, Alert} from 'react-bootstrap'
+import {ButtonGroup, Button, Alert, Container, Row as BRow} from 'react-bootstrap';
 
 class TimeTable extends Component {
     constructor(props) {
@@ -65,32 +66,28 @@ class TimeTable extends Component {
             return a.day - b.day
         });
         return (
-            <div className="center-very-big-div">
-                <div className="center-big-div">
-                    <ButtonGroup>
-                        <Button onClick={() => {this.props.history.push("/infos/daily_edt")}}>Emploi du temps du jour</Button>
-                        <DropdownButton as={ButtonGroup} title="emploi du temps de la semaine">
-                            <Dropdown.Item as={Button} onClick={this.genEdt}>Emploi du temps général</Dropdown.Item>
-                            <Dropdown.Divider />
-                            <Dropdown.Item as={Button} onClick={this.Edt1}>Emploi du temps de semaine 1</Dropdown.Item>
-                            <Dropdown.Item as={Button} onClick={this.Edt2}>Emploi du temps de semaine 2</Dropdown.Item>
-                        </DropdownButton>
-                    </ButtonGroup>
-                </div>
-                <br/>
-                <br/>
+            <Container>
+                <BRow>
+                    <Edt/>
+                </BRow>
                 <Alert variant="info" className="text-center">
                     Emploi du temps {this.state.week ? `de semaine ${this.state.week}` : ""}
                 </Alert>
-                <br/>
-                <div className="edttable" id="edttable">
+                <BRow>
+                    <ButtonGroup>
+                        <Button onClick={this.genEdt}>Emploi du temps général</Button>
+                        <Button onClick={this.Edt1}>Emploi du temps de semaine 1</Button>
+                        <Button onClick={this.Edt2}>Emploi du temps de semaine 2</Button>
+                    </ButtonGroup>
+                </BRow>
+                <BRow className="edttable" id="edttable">
                     <Row edt={edt.filter(hour => hour.day === 1)} day={1}/>
                     <Row edt={edt.filter(hour => hour.day === 2)} day={2}/>
                     <Row edt={edt.filter(hour => hour.day === 3)} day={3}/>
                     <Row edt={edt.filter(hour => hour.day === 4)} day={4}/>
                     <Row edt={edt.filter(hour => hour.day === 5)} day={5}/>
-                </div>
-            </div>
+                </BRow>
+            </Container>
         )
     }
 }
