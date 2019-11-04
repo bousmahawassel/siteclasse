@@ -39,8 +39,8 @@ class Hour(models.Model):
         (16, "16h05"),
         (17, "17h00"),
     ])
-    duration = models.FloatField(default=1)
-    week = models.IntegerField(choices=[
+    duration = models.IntegerField(default=1)
+    week = models.FloatField(choices=[
         (1, 1),
         (2, 2),
         (0, "Toutes les semaines"),
@@ -70,13 +70,38 @@ class Hour(models.Model):
     ], max_length=10, blank=True, default="")
     room = models.CharField(max_length=5,blank = True, default="")
     teacher = models.TextField(blank=True, default="")
+    
+class WeekHours(models.Model):
+    day = models.IntegerField(choices=[
+        (1, "LUNDI"),
+        (2, "MARDI"),
+        (3, "MERCREDI"),
+        (4, "JEUDI"),
+        (5, "VENDREDI"),
+    ])
+    hour = models.FloatField(choices=[
+        (8, "8h10"),
+        (9, "9h05"),
+        (10, "10h20"),
+        (11, "11h15"),
+        (11.5, "11h45"),
+        (12, "12h10"),
+        (13, "13h05"),
+        (14, "14h00"),
+        (15, "14h55"),
+        (16, "16h05"),
+        (17, "17h00"),
+    ])
+    hours = models.ManyToManyField('Hour')
 
 class DefaultHours(SingletonModel):
     hours = models.ManyToManyField('Hour')
+    week_hours = models.ManyToManyField('WeekHours')
 
 class Option(models.Model):
     name_opt = models.TextField(unique=True)
     hours = models.ManyToManyField('Hour')
+    week_hours = models.ManyToManyField('WeekHours')
 
 class Timetable(models.Model):
     hours = models.ManyToManyField('Option')

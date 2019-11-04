@@ -772,6 +772,66 @@
     }
   },
   {
+    "model":"infos.WeekHours",
+    "pk":1,
+    "fields":{
+      "day":4,
+      "hour":16,
+      "hours":[
+	51,
+	54
+      ]
+    }
+  },
+  {
+    "model":"infos.WeekHours",
+    "pk":2,
+    "fields":{
+      "day":4,
+      "hour":16,
+      "hours":[
+	52,
+	53
+      ]
+    }
+  },
+  {
+    "model":"infos.WeekHours",
+    "pk":3,
+    "fields":{
+      "day":5,
+      "hour":11,
+      "hours":[
+	62,
+	63
+      ]
+    }
+  },
+  {
+    "model":"infos.WeekHours",
+    "pk":4,
+    "fields":{
+      "day":5,
+      "hour":12,
+      "hours":[
+	64,
+	65
+      ]
+    }
+  },
+  {
+    "model":"infos.WeekHours",
+    "pk":5,
+    "fields":{
+      "day":5,
+      "hour":15,
+      "hours":[
+	70,
+	71
+      ]
+    }
+  },
+  {
     "model":"infos.DefaultHours",
     "pk":1,
     "fields":{
@@ -791,13 +851,12 @@
         40,
         50,
         60,
-        61,
-        62,
-        63,
-        64,
-        65,
-        70,
-        71
+        61
+      ],
+      "week_hours":[
+	3,
+	4,
+	5
       ]
     }
   },
