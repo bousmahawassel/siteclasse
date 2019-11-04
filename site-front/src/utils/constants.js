@@ -1,1 +1,1 @@
-export const BACKEND_SERVER = "http://1ere5-spf.alwaysdata.net/api";
+export const BACKEND_SERVER = "localhost:8000";
