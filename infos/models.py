@@ -39,8 +39,8 @@ class Hour(models.Model):
         (16, "16h05"),
         (17, "17h00"),
     ])
-    duration = models.IntegerField(default=1)
-    week = models.FloatField(choices=[
+    duration = models.FloatField(default=1)
+    week = models.IntegerField(choices=[
         (1, 1),
         (2, 2),
         (0, "Toutes les semaines"),
@@ -92,6 +92,7 @@ class WeekHours(models.Model):
         (16, "16h05"),
         (17, "17h00"),
     ])
+    duration = models.FloatField(default=1)
     hours = models.ManyToManyField('Hour')
 
 class DefaultHours(SingletonModel):

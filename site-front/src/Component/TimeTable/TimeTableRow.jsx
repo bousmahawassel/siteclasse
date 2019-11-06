@@ -14,33 +14,39 @@ export default class Row extends Component {
     render() {
         return (
             <Col>
-                <BRow><Col><p className="text-center">{this.state.days[this.props.day]}</p></Col></BRow>
+                <BRow className="hrow"><Col><p className="text-center">{this.state.days[this.props.day]}</p></Col></BRow>
                 {
                     this.props.edt.map((hour) => (
-                        (!hour.week &&
+                        (
+                            !hour.hours &&
                             (
-                                <BRow key={hour.id} style={{height: `${hour.duration * 125 + (hour.duration - 1) * 2}px`}}>
-                                    {
-                                        hour.subject &&
-                                        (
-                                            <Col xs={hour.week ? 6 : 12}>
-                                                <p className="text-center">
-                                                    {hour.subject}<br/><br/>{hour.teacher}<br/><br/>{hour.room}
-                                                </p>
-                                            </Col>
-                                        )
-                                    }
+                                <BRow key={hour.id} className={!hour.week && "edtrow"}
+                                      style={{height: `${hour.duration * 150 + (hour.duration - 1) * 2}px`}}
+                                >
+                                    <Col xs={hour.week ? 6 : 12} className={hour.week && "edtrow"}>
+                                        {hour.subject && (
+                                            <p className="text-center">
+                                                {hour.subject}<br/>{hour.teacher}<br/>{hour.room}
+                                            </p>
+                                        )}
+                                    </Col>
                                 </BRow>
                             )
                         )) ||
                         (
-                            hour.week === 2 &&
+                            hour.hours &&
                             (
-                                <Col key={hour.id} xs={6}>
-                                    <p className="text-center">
-                                        {hour.subject}<br/><br/>{hour.teacher}<br/><br/>{hour.room}
-                                    </p>
-                                </Col>
+                                <BRow key={hour.id} style={{height: `${hour.duration * 150 + (hour.duration - 1) * 2}px`}}>
+                                    {
+                                        hour.hours.map((microHour) => (
+                                            <Col key={microHour.id} xs={6} className="edtrow">
+                                                <p className="text-center">
+                                                    {microHour.subject}<br/>{microHour.teacher}<br/>{microHour.room}
+                                                </p>
+                                            </Col>
+                                        ))
+                                    }
+                                </BRow>
                             )
 
                         )

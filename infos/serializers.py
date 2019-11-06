@@ -8,12 +8,13 @@ class TimetableSerializer(serializers.ModelSerializer):
             "hours",
         ]
 
-class DefaultHoursSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = DefaultHours
-        fields = "__all__"
-
 class HourSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hour
+        fields = "__all__"
+
+class WeekHoursSerializer(serializers.ModelSerializer):
+    hours = HourSerializer(read_only=True, many=True)
+    class Meta:
+        model = WeekHours
         fields = "__all__"

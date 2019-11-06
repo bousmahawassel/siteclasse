@@ -28,10 +28,14 @@ def edt(request):
         return Response({"error": "Il y a eu un problème, tu dois te reconnecter"}, status.HTTP_401_UNAUTHORIZED)
     edt = user.timetable
     hours = list(DefaultHours.load().hours.all())
+    hours.extend(list(DefaultHours.load().week_hours.all()))
     for option in edt.hours.all():
         for hour in option.hours.all():
             hours.append(hour)
-    data = [HourSerializer(hour).data for hour in hours]
+        for hour in option.week_hours.all():
+            hours.append(hour)
+    data = [HourSerializer(hour).data if isinstance(hour, Hour) else WeekHoursSerializer(hour).data
+        for hour in hours]
     return Response(data, status.HTTP_200_OK)
 
 @api_view(["GET", "POST", "DELETE"])

@@ -10,7 +10,7 @@ class TimeTable extends Component {
         super(props);
         this.state = {
             edt:[],
-            week: Number(props.location.pathname.substring(11))
+            week: undefined
         }
     }
     componentDidMount() {
@@ -36,25 +36,34 @@ class TimeTable extends Component {
         }
     }
     genEdt = () => {
-        this.props.history.push("/reload/infos/edt");
+        this.setState({week: undefined});
     };
     Edt1 = () => {
-        this.props.history.push("/reload/infos/edt/1");
+        this.setState({week: 1});
     };
     Edt2 = () => {
-        this.props.history.push("/reload/infos/edt/2");
+        this.setState({week: 2});
     };
     render() {
-        let edt = this.state.edt;
+        let edt = this.state.edt, start_edt = this.state.edt;
         if (this.state.week) {
-            console.log(edt);
-            edt = edt.filter((hour) => {
-                return hour.week === 0 || hour.week === this.state.week
-            });
+            /*edt = edt.filter((hour) => {
+                return hour.week === 0 || hour.hours.find((microHour) => {
+                    return microHour.week === this.state.week
+                })
+            });*/
             edt = edt.map((hour) => {
-                hour.week = undefined;
-                return hour
+                if (hour.hours) {
+                    let microHour = hour.hours.find((microHour) => {
+                        return microHour.week === this.state.week
+                    });
+                    microHour.week = undefined;
+                    return microHour
+                } else {
+                    return hour
+                }
             })
+            console.log(edt)
         }
         edt.sort((a, b) => {
             if (a.day === b.day) {
@@ -66,10 +75,8 @@ class TimeTable extends Component {
             return a.day - b.day
         });
         return (
-            <Container>
-                <BRow>
-                    <Edt/>
-                </BRow>
+            <Container className="justify-content-center">
+                <Edt edt={start_edt}/>
                 <Alert variant="info" className="text-center">
                     Emploi du temps {this.state.week ? `de semaine ${this.state.week}` : ""}
                 </Alert>
@@ -80,7 +87,7 @@ class TimeTable extends Component {
                         <Button onClick={this.Edt2}>Emploi du temps de semaine 2</Button>
                     </ButtonGroup>
                 </BRow>
-                <BRow className="edttable" id="edttable">
+                <BRow className="edttable flex-nowrap" style={{overflow: "auto"}} id="edttable">
                     <Row edt={edt.filter(hour => hour.day === 1)} day={1}/>
                     <Row edt={edt.filter(hour => hour.day === 2)} day={2}/>
                     <Row edt={edt.filter(hour => hour.day === 3)} day={3}/>

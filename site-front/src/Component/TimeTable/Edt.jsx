@@ -1,16 +1,15 @@
 import React, {Component} from 'react'
-import Row from './TimeTableRow'
 import './TimeTable.css'
 import auth_axios from '../../utils/axios'
 import * as moment from 'moment'
-import {Alert} from 'react-bootstrap'
+import {Alert, Row as BRow, Col} from 'react-bootstrap'
 
 export default class Edt extends Component {
     constructor(props) {
         super(props);
         this.state = {
             notAuthenticated: false,
-            edt: []
+            edt: props.edt || []
         }
     }
     componentDidMount() {
@@ -54,19 +53,35 @@ export default class Edt extends Component {
             return hour
         });
         return (
-            <div className="center-big-div">
-                <br/>
-                <br/>
+            <>
                 <Alert variant="info" className="text-center">
                     Emploi du temps du {
                         ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"][moment().day()]
                     } de semaine {week}
                 </Alert>
-                <br/>
-                <div className="center-div">
-                    <Row edt={edt} day={moment().day()}/>
-                </div>
-            </div>
+                <BRow className="flex-nowrap" style={{overflow: "auto"}}>
+                    <Col xs={"auto"}>
+                        <p className="text-center">
+                            {["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"][moment().day()]}
+                        </p>
+                    </Col>
+                    {
+                        edt.map(
+                            (hour) => (
+                                <Col className={"edtrow" + (hour.subject ? "" : " empty")} xs={"auto"} key={hour.id}>
+                                    {
+                                        (hour.subject &&
+                                            <p className="text-center">
+                                                {hour.subject}<br/>{hour.teacher}<br/>{hour.room}
+                                            </p>
+                                        ) || <p className="empty"/>
+                                    }
+                                </Col>
+                            )
+                        )
+                    }
+                </BRow>
+            </>
         )
     }
 }
