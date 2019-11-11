@@ -1,40 +1,22 @@
 import React, {Component} from 'react'
 import './TimeTable.css'
-import auth_axios from '../../utils/axios'
 import * as moment from 'moment'
 import {Alert, Row as BRow, Col} from 'react-bootstrap'
 
 export default class Edt extends Component {
     constructor(props) {
         super(props);
+	console.log("truc");
+	console.log(props);
         this.state = {
             notAuthenticated: false,
             edt: props.edt || []
         }
     }
-    componentDidMount() {
-        this.loadEdt()
-    }
-    async loadEdt() {
-        try {
-            const promise = await auth_axios.get("/infos/edt");
-            if (promise === "Not authenticated") {
-                this.setState({notAuthenticated: true})
-            } else {
-                const status = promise.status;
-                if (status === 200) {
-                    let edt = promise.data;
-                    this.setState({edt: edt})
-                }
-            }
-        } catch(e) {
-            if (e.response.status === 401) {
-                this.setState({notAuthenticated: true})
-            }
-        }
-    }
     render() {
-        let edt = this.state.edt;
+        let edt = this.props.edt;
+	console.log(edt);
+	console.log(this.props);
         edt.sort((a, b) => {
             if (a.day === b.day) {
                 if (a.hour === b.hour) {
@@ -60,7 +42,7 @@ export default class Edt extends Component {
                     } de semaine {week}
                 </Alert>
                 <BRow className="flex-nowrap" style={{overflow: "auto"}}>
-                    <Col xs={"auto"}>
+                    <Col xs className="hrow">
                         <p className="text-center">
                             {["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"][moment().day()]}
                         </p>
@@ -68,13 +50,13 @@ export default class Edt extends Component {
                     {
                         edt.map(
                             (hour) => (
-                                <Col className={"edtrow" + (hour.subject ? "" : " empty")} xs={"auto"} key={hour.id}>
+                                <Col className={"edtrow" + (hour.subject ? "" : " empty")} xs key={hour.id}>
                                     {
                                         (hour.subject &&
                                             <p className="text-center">
                                                 {hour.subject}<br/>{hour.teacher}<br/>{hour.room}
                                             </p>
-                                        ) || <p className="empty"/>
+                                        ) || <p className="empty" style={{color: "black"}}>Rien</p>
                                     }
                                 </Col>
                             )

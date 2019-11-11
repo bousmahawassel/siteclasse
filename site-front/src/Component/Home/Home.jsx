@@ -48,7 +48,7 @@ class Home extends Component {
                                 !</h1>
                             <p>Voici le site que j'ai fait pour notre classe. Pour l'instant, il gère:</p>
                             <ul>
-                                <li><Link to="/infos/daily_edt">Les emplois du temps</Link></li>
+                                <li><Link to="/infos/edt">Les emplois du temps</Link></li>
                                 <li>
                                     Et c'est tout (j'ai pas eu le temps de faire le reste...). Mais ne vous
                                     inquiétez
