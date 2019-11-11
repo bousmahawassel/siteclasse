@@ -28,7 +28,6 @@ export default class ResetPassword extends Component {
         try {
             const promise = await axios.post(constants.BACKEND_SERVER + "/api/reset_password", {email: this.state.email});
             if (promise.status === 200) {
-                console.log(promise);
                 let success = document.getElementsByClassName("alert-success")[0];
                 success.removeAttribute("hidden");
                 success.textContent = promise.data.success

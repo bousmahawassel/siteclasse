@@ -6,8 +6,6 @@ import {Alert, Row as BRow, Col} from 'react-bootstrap'
 export default class Edt extends Component {
     constructor(props) {
         super(props);
-	console.log("truc");
-	console.log(props);
         this.state = {
             notAuthenticated: false,
             edt: props.edt || []
@@ -15,8 +13,6 @@ export default class Edt extends Component {
     }
     render() {
         let edt = this.props.edt;
-	console.log(edt);
-	console.log(this.props);
         edt.sort((a, b) => {
             if (a.day === b.day) {
                 if (a.hour === b.hour) {

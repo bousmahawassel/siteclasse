@@ -29,7 +29,6 @@ class TimeTable extends Component {
                 }
             }
         } catch(e) {
-            console.log(e);
             if (e.response.status === 401) {
                 this.props.history.push("/auth");
             }
@@ -63,7 +62,6 @@ class TimeTable extends Component {
                     return hour
                 }
             })
-            console.log(edt)
         }
         edt.sort((a, b) => {
             if (a.day === b.day) {
