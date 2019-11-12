@@ -9,7 +9,8 @@ import Home from './Component/Home/Home';
 import ResetPassword from './Component/Auth/ResetPassword';
 import ResetLink from './Component/Auth/ResetLink';
 import Header from './Component/Header/Header';
-import Reload from './Component/Reload/Reload'
+import Reload from './Component/Reload/Reload';
+import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route path="/reload" component={Reload}/>
               <Route render={function render() {return (<p>Error</p>)}} path="*"/>
           </Switch>
+	  <Footer />
       </Router>
     </div>
   );
