@@ -2,3 +2,5 @@ db*
 .idea/
 *__pycache__
 migrations/
+site-front/
+!*/site-front/build/
