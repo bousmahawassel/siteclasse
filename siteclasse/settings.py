@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1y+907^di20ai(vx0wtv)70zv%_bjl=#8akd(%+i(0sh*ogp8v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://1ere5-spf.alwaysdata.net/api"]
 
 
 # Application definition
@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'custom_auth.CustomUser'
 
-FRONT_END = "localhost:3000"
+FRONT_END = "https://1ere5-spf.alwaysdata.net"
 
 
 # Internationalization
