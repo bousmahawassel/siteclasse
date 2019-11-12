@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1y+907^di20ai(vx0wtv)70zv%_bjl=#8akd(%+i(0sh*ogp8v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["http://1ere5-spf.alwaysdata.net/api"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
