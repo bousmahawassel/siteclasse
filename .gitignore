@@ -4,3 +4,5 @@ db*
 migrations/
 site-front/
 !*/site-front/build/
+lib/
+bin/
