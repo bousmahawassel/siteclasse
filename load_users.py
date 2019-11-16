@@ -10,7 +10,7 @@ CustomUser.objects.create_user("luis.pacomme@hotmail.fr", CustomUser.objects.mak
 CustomUser.objects.create_user("olympe.czbande", CustomUser.objects.make_random_password(128), 6, "Olympe", "Cabande")
 CustomUser.objects.create_user("cardona.sorin@orange.fr", CustomUser.objects.make_random_password(128), 7, "Quentin", "Cardona")
 CustomUser.objects.create_user("Virgile.ceaux@gmail.com", CustomUser.objects.make_random_password(128), 3, "Virgile", "Ceaux")
-CustomUser.objects.create_user("hugo.2003@gmail.coma", CustomUser.objects.make_random_password(128), 8, "Hugo", "Chen")
+CustomUser.objects.create_user("hugo.2003@gmail.com", CustomUser.objects.make_random_password(128), 8, "Hugo", "Chen")
 CustomUser.objects.create_user("corentin.derette@yahoo.fr", CustomUser.objects.make_random_password(128), 9, "Corentin", "De Rette")
 CustomUser.objects.create_user("amir.djelidi.pro@gmail.com", CustomUser.objects.make_random_password(128), 10, "Amir", "Djelidi")
 CustomUser.objects.create_user("inelga75@gmail.com", CustomUser.objects.make_random_password(128), 11, "Inès", "El Garouani")
