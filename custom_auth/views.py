@@ -37,11 +37,13 @@ def reset_password(request, link = None):
                 subject='Changement de mots de passe',
                 html_content=f'<p>Voici le <a href={FRONT_END}/reset_password/{user.link}>lien</a>'
                              f' où tu peux changer de mot de passe')
+            print(os.environ.get('SENDGRID_API_KEY'))
             sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+            print(sg.api_key)
             try:
                 sg.send(message)
             except Exception as e:
-                print(dir(e))
+                print(e)
                 return Response(
                     {"error": "Suite à une erreur au niveau du serveur, le mail n'a pu être envoyé. "
                               "Réessaye d'ici quelques minutes, et préviens-moi via Whatsapp, par SMS au 07 83 45 19 66"
