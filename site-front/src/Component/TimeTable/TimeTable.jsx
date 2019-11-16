@@ -44,7 +44,7 @@ class TimeTable extends Component {
         this.setState({week: 2});
     };
     render() {
-        let edt = this.state.edt, start_edt = this.state.edt;
+        let edt = [...this.state.edt], start_edt = [...this.state.edt];
         if (this.state.week) {
             /*edt = edt.filter((hour) => {
                 return hour.week === 0 || hour.hours.find((microHour) => {
