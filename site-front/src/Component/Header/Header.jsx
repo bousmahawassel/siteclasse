@@ -14,10 +14,10 @@ const Header = (props) => {
                     <Nav className="ml-auto">
                         <Nav.Link className="text-nowrap" as={Link} id="link" to="/">Page d'accueil</Nav.Link>
                         <NavDropdown title="infos">
-                            <NavDropdown.Item as={Link} to="infos/edt">Emplois du temps</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="infos/docs" disabled>Documents à rendre (pas encore disponible)</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="infos/vie_scolaire" disabled>Infos Vie scolaire (pas encore disponible)</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="infos/devoirs" disabled>Devoirs (pas encore disponible)</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/infos/edt">Emplois du temps</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/infos/docs" disabled>Documents à rendre (pas encore disponible)</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/infos/vie_scolaire" disabled>Infos Vie scolaire (pas encore disponible)</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/infos/devoirs" disabled>Devoirs (pas encore disponible)</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="Cours (pas encore disponible)" disabled/>
                         {/*<NavDropdown title="Cours">
