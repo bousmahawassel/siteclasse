@@ -57,7 +57,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/wassel/Documents/progra/siteclasse"
+set -gx VIRTUAL_ENV "/media/wassel/Windows/linux_files/progra/siteclasse"
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | tr "." "\n")[1] -lt 3

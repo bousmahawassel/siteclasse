@@ -1,4 +1,4 @@
-#!/home/wassel/Documents/progra/siteclasse/bin/python3.7
+#!/media/wassel/Windows/linux_files/progra/siteclasse/bin/python3.7
 from django.core import management
 
 if __name__ == "__main__":

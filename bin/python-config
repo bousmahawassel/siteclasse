@@ -1,4 +1,4 @@
-#!/home/wassel/Documents/progra/siteclasse/bin/python
+#!/media/wassel/Windows/linux_files/progra/siteclasse/bin/python
 
 import sys
 import getopt

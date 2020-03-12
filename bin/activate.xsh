@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/home/wassel/Documents/progra/siteclasse"
+$VIRTUAL_ENV = r"/media/wassel/Windows/linux_files/progra/siteclasse"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]
