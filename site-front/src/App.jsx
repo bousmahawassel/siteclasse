@@ -11,6 +11,7 @@ import ResetLink from './Component/Auth/ResetLink';
 import Header from './Component/Header/Header';
 import Reload from './Component/Reload/Reload';
 import Footer from './Component/Footer/Footer'
+import Forums from './Component/Forums/Forums'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route component={TimeTable} path="/infos/edt"/>
               <Route component={ResetPassword} path="/reset_password" exact/>
               <Route component={ResetLink} path="/reset_password"/>
+              <Route component={Forums} path="/forums"/>
               <Route path="/" component={Home} exact/>
               <Route path="/reload" component={Reload}/>
               <Route render={function render() {return (<p>Error</p>)}} path="*"/>

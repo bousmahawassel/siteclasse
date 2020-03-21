@@ -45,7 +45,7 @@ class TimeTable extends Component {
     };
     render() {
         let edt = JSON.parse(JSON.stringify(this.state.edt)), start_edt = JSON.parse(JSON.stringify(this.state.edt));
-        console.log(edt)
+        console.log(edt);
         if (this.state.week) {
             /*edt = edt.filter((hour) => {
                 return hour.week === 0 || hour.hours.find((microHour) => {

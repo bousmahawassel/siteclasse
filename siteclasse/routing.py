@@ -4,7 +4,7 @@ import forums.routing
 
 application = ProtocolTypeRouter({
     # (http->django views is added by default)
-'websocket': AuthMiddlewareStack(
+    'websocket': AuthMiddlewareStack(
         URLRouter(
             forums.routing.websocket_urlpatterns
         )
