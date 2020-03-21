@@ -1,11 +1,10 @@
 from django.shortcuts import render
 from rest_framework.response import Response
-from rest_framework.decorators import api_view, authentication_classes
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import api_view
 from rest_framework import status
 from rest_framework.authtoken.models import Token
-from .models import *
 from .serializers import *
+from .models import *
 
 # Create your views here.
 
@@ -34,8 +33,7 @@ def edt(request):
             hours.append(hour)
         for hour in option.week_hours.all():
             hours.append(hour)
-    data = [HourSerializer(hour).data if isinstance(hour, Hour) else WeekHoursSerializer(hour).data
-        for hour in hours]
+    data = [HourSerializer(hour).data if isinstance(hour, Hour) else WeekHoursSerializer(hour).data for hour in hours]
     return Response(data, status.HTTP_200_OK)
 
 @api_view(["GET", "POST", "DELETE"])

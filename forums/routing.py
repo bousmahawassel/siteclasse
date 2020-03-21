@@ -1,7 +1,7 @@
-from django.urls import path
+from django.urls import re_path
 
 from . import consumers
 
 websocket_urlpatterns = [
-    path(r'ws/forum/<forum>/', consumers.ChatConsumer),
+    re_path(r'forums/(?P<forum>\w+)/(?P<token>\w+)$', consumers.ChatConsumer),
 ]
