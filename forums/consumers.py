@@ -20,6 +20,8 @@ class ChatConsumer(AsyncWebsocketConsumer):
             self.close()
 
     async def disconnect(self, close_code):
+        ws_token = self.scope["url_route"]["kwargs"]["token"]
+        WebSocketToken.objects.get(token=ws_token).delete()
         await self.channel_layer.group_discard(
             self.forum,
             self.channel_name
@@ -30,7 +32,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
         message = text_data_json['message']
         await sync_to_async(Message.objects.create)(message=message["message"], date=message["date"],
                                                     author=Token.objects.get(key=message["author"]).user,
-                                                    pseudo=message["pseudo"])
+                                                    pseudo=message["pseudo"], forum=message["forum"])
         await self.channel_layer.group_send(
             self.forum,
             {

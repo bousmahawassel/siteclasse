@@ -36,6 +36,7 @@ export default class Forums extends Component {
                 "latin": "latin"
                 }
             },
+            temp_forums: {},
             "messages": [],
         };
         this.URL = constants.BACKEND_WS + "/forums/" + this.state.forum + "/";
@@ -118,19 +119,32 @@ export default class Forums extends Component {
                                         <NavDropdown title={categorie[0]}>
                                             {Object.entries(categorie[1]).map((forum) => (
                                                 <Nav.Item>
-                                                    <Nav.Link eventKey={forum[0]} as={Link} to={`/forums/${forum[0]}`}>
+                                                    <Nav.Link eventKey={forum[0]} as={Link} to={`/reload/forums/${forum[0]}`}>
                                                         {forum[1]}
                                                     </Nav.Link>
                                                 </Nav.Item>
                                             ))}
                                         </NavDropdown>
                                     ))}
+                                    <NavDropdown title="Forums temporaires">
+                                        {
+                                            Object.entries(this.state.temp_forums).map((forum) => (
+                                                <Nav.Item>
+                                                    <Nav.Link eventKey={forum[0]} as={Link}
+                                                              to={`/forums/temp/${forum[0]}`}>
+                                                        {forum[1]}
+                                                    </Nav.Link>
+                                                </Nav.Item>
+                                            ))
+                                        }
+                                    </NavDropdown>
                                 </Nav>
                             </Col>
                         </Row>
                         <Row>
                             <Col >
-                                {this.state.messages.map((message, index) => (
+                                {this.state.messages.map((message, index) => {
+                                    return message.forum === this.state.forum && (
                                     <Row>
                                         <Col xs={{span: 6, offset: message.author===this.state.token && 6}}>
                                             <Card>
@@ -145,7 +159,7 @@ export default class Forums extends Component {
                                             </Card>
                                         </Col>
                                     </Row>
-                                ))}
+                                )})}
                                 <Row>
                                     <Col xs={10}>
                                         <textarea id="text_input" style={{width: "100%"}} placeholder="Envoyer un message..."/>
