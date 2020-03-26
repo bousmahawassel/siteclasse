@@ -87,7 +87,10 @@ export default class Forums extends Component {
         };
         this.ws.send(JSON.stringify(message))
     };
-
+    changeForum = (event) => {
+        this.props.history.push(`/forums/${event.target.id}`);
+        this.setState({forum: event.target.id})
+    };
     render() {
         return (
             <Container>
@@ -95,7 +98,7 @@ export default class Forums extends Component {
                     <Col xs={4}>
                         {
                             this.state.students.map((student) => (
-                                <Card className="text-center">
+                                <Card className="text-center" key={student.name}>
                                     <Card.Header>{student.pseudo}</Card.Header>
                                     <Card.Body>
                                         {
@@ -116,12 +119,13 @@ export default class Forums extends Component {
                             <Col>
                                 <Nav variant="tabs" justify defaultActiveKey={this.state.forum}>
                                     {Object.entries(this.state.forums).map((categorie) => (
-                                        <NavDropdown title={categorie[0]}>
+                                        <NavDropdown title={categorie[0]} key={categorie[0]}>
                                             {Object.entries(categorie[1]).map((forum) => (
-                                                <Nav.Item>
-                                                    <Nav.Link eventKey={forum[0]} as={Link} to={`/reload/forums/${forum[0]}`}>
+                                                <Nav.Item key={forum[0]}>
+                                                    <Button id={forum[0]} to={`/forums/${forum[0]}`}
+                                                            onClick={this.changeForum}>
                                                         {forum[1]}
-                                                    </Nav.Link>
+                                                    </Button>
                                                 </Nav.Item>
                                             ))}
                                         </NavDropdown>
@@ -129,7 +133,7 @@ export default class Forums extends Component {
                                     <NavDropdown title="Forums temporaires">
                                         {
                                             Object.entries(this.state.temp_forums).map((forum) => (
-                                                <Nav.Item>
+                                                <Nav.Item key={forum[0]}>
                                                     <Nav.Link eventKey={forum[0]} as={Link}
                                                               to={`/forums/temp/${forum[0]}`}>
                                                         {forum[1]}
@@ -145,7 +149,7 @@ export default class Forums extends Component {
                             <Col >
                                 {this.state.messages.map((message, index) => {
                                     return message.forum === this.state.forum && (
-                                    <Row>
+                                    <Row key={message.date}>
                                         <Col xs={{span: 6, offset: message.author===this.state.token && 6}}>
                                             <Card>
                                                 {
